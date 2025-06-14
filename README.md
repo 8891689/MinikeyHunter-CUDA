@@ -79,7 +79,7 @@ make clean
 ```
 3. Examples:
 
-1. Start a sequential search from a specific key, using GPU 0, preferably using the default dynamic allocation unless you have multiple graphics cards:
+4. Start a sequential search from a specific key, using GPU 0, preferably using the default dynamic allocation unless you have multiple graphics cards:
 ```
 ./minikey -i test.txt -d 0 -s S8888888888888888
 
@@ -98,7 +98,7 @@ Total: 30.447 MKey/s | Candidates: 0.144 MKey/s | Task: S88888888888888888WRWP ^
 ```
 
 
-2. Use GPU 1 for random search with custom number of blocks and threads, preferably with default dynamic allocation:
+5. Use GPU 1 for random search with custom number of blocks and threads, preferably with default dynamic allocation:
 ```
 ./minikey -i test.txt -r -d 1 -b 256 -t 512
 
@@ -113,7 +113,7 @@ RANDOM mode (bulk size: 3072)
 Total: 30.302 MKey/s | Candidates: 0.124 MKey/s | Task: SpGtW4DpLTY9SJR7xRx1hj ^C
 ```
 
-3. Execute from the beginning and you can experiment with it as a verification.
+6. Execute from the beginning and you can experiment with it as a verification.
 ```
 ./minikey -i test.txt
 Loaded addresses : 2
