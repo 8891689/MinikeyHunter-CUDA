@@ -81,20 +81,18 @@ make clean
 
 4. Start a sequential search from a specific key, using GPU 0, preferably using the default dynamic allocation unless you have multiple graphics cards:
 ```
-./minikey -i test.txt -d 0 -s S8888888888888888
+./minikey -i test.txt -d 0 -s S888888888888888888888
 
-./minikey -i test.txt -s S8888888888888888
+./minikey -i Sminikey_Address.txt
+[INFO] Loaded 4907 addresses into Bloom filters and set.
+[INFO] Reading status file: status.txt
+[INFO] Mode: Preset order of S-Key indexes (S888888888888888888888, index 0).
+[INFO] Using Device 0: NVIDIA GeForce GT 1030 (3 SMs)
+[INFO] Grid: 96 blocks, 256 threads/block
+[INFO] Work started at Thu Jun 19 14:11:52 2025
+[INFO] SEQUENTIAL (Indexed) mode starting from S888888888888888888888 (index 0).
+[INFO] Speed: 196.64 MKey/s | Probe: 3.81 M | Task: S8888888888888889gc4Ac              ^C
 
-Loaded addresses : 2
-Using   device   : 0 
-NVIDIA GeForce GT 1030 ( 3 procs)
-number of blocks : 24
-number of threads: 128
-Work started at Sun Jun 15 05:09:54 2025
-Starting key: S888888888888888811111
-Total: 30.528 MKey/s | Candidates: 0.154 MKey/s | Task: S88888888888888886dMnF 
-found: 1LNTHdkFgvn6fhKyzgyDvkVoa4ShvJA5aH - 2587BF77DB81437D3DE0EB97301791217341F6886057AA796F67E74431E144A0
-Total: 30.447 MKey/s | Candidates: 0.144 MKey/s | Task: S88888888888888888WRWP ^C
 ```
 
 
@@ -102,30 +100,71 @@ Total: 30.447 MKey/s | Candidates: 0.144 MKey/s | Task: S88888888888888888WRWP ^
 ```
 ./minikey -i test.txt -r -d 1 -b 256 -t 512
 
-./minikey -i test.txt -r
-Loaded addresses : 2
-Using   device   : 0 
-NVIDIA GeForce GT 1030 ( 3 procs)
-number of blocks : 24
-number of threads: 128
-Work started at Sun Jun 15 06:01:15 2025
-RANDOM mode (bulk size: 3072)
-Total: 30.302 MKey/s | Candidates: 0.124 MKey/s | Task: SpGtW4DpLTY9SJR7xRx1hj ^C
+./minikey -i Sminikey_Address.txt -r
+[INFO] Loaded 4907 addresses into Bloom filters and set.
+[INFO] Reading status file: status.txt
+[INFO] Mode: Random S-Key generation (GPU internal).
+[INFO] Using Device 0: NVIDIA GeForce GT 1030 (3 SMs)
+[INFO] Grid: 96 blocks, 256 threads/block
+[INFO] Work started at Thu Jun 19 13:27:35 2025
+[INFO] Mixed (random jump order) mode enabled.
+[INFO] Random jumps per batch: 100000000
+[INFO] Detecting cache area: 500000
+[INFO] Speed: 616.40 MKey/s | Probe: 1.94 G | Task: S5WpiwaNxVcGBDDrYTvnGk
 ```
 
 6. Execute from the beginning and you can experiment with it as a verification.
 ```
-./minikey -i test.txt
-Loaded addresses : 2
-Using   device   : 0 
-NVIDIA GeForce GT 1030 ( 3 procs)
-number of blocks : 24
-number of threads: 128
-Work started at Sun Jun 15 05:13:45 2025
-Starting key: 
-Total: 30.140 MKey/s | Candidates: 0.034 MKey/s | Task: S11111111111111116cjFd 
-found: 1DpvL6FtuiQcp3FHiP56koeNmajChwG21Q - FF2818908FB70993AA3B017F4FE92A7AD13D142BE5451A77F287BA74FC206543
-Total: 30.594 MKey/s | Candidates: 0.024 MKey/s | Task: S11111111111111118ViQw ^C
+./minikey -i test.txt -s S111111111111111111111
+[INFO] Loaded 10 addresses into Bloom filters and set.
+[INFO] Reading status file: status.txt
+[INFO] Incremental mode: From S-Key(S111111111111111111111) 
+[INFO] Using Device 0: NVIDIA GeForce GT 1030 (3 SMs)
+[INFO] Grid: 96 blocks, 256 threads/block
+[INFO] Work started at Thu Jun 19 14:11:27 2025
+
+
+Address: 1Kf9HN3ssoSWpXEfvZmL1KukDZB7g5RE3r (Uncompressed)
+Privkey: 920E3A05397C69450BEB8E76CC6B870610831F7FD52E073E17B47C127A0C57F7
+HASH160: cca8fbf5e9c0d0b7281d6bfe1ff86352be3f0fbe
+
+Address: 1MaTZNiSp41fT31USu9R9gtnueCmwxSikL (Compressed)
+Privkey: 920E3A05397C69450BEB8E76CC6B870610831F7FD52E073E17B47C127A0C57F701
+HASH160: e1b6697d29889233826243d1888dd4bbb1155ba7
+
+
+Address: 1LnGAaZrP9bFdQ5df3LXqranGVS189azro (Uncompressed)
+Privkey: F380202B0D6838959A129541374E76C50ECBB40958043C4779FEAA7EC78DE59A
+HASH160: d8f9c4747c949af7f7a866e730358d74180c44fb
+
+Address: 1MdDaPrdffkv6kLs2hrh3wdYEGZb3JLetC (Compressed)
+Privkey: F380202B0D6838959A129541374E76C50ECBB40958043C4779FEAA7EC78DE59A01
+HASH160: e23bfcee95e58f8f82f98849bacaf2971e02156a
+
+
+Address: 1BcRHK9VTxXXNhsgNpS1PQYK8zfMu84pXh (Uncompressed)
+Privkey: 11B27EF4C6C4C4A176EA63A68FD02D065FDEF51BD36942AD1B80AF20355A6E49
+HASH160: 746415e1861bf44c684e17f2f51cb6a314250968
+
+Address: 17WaZgkVi7F2pWfPitPpA9tpz9MrHT4aZT (Compressed)
+Privkey: 11B27EF4C6C4C4A176EA63A68FD02D065FDEF51BD36942AD1B80AF20355A6E4901
+HASH160: 4768d5c456996ce98f433635b52b0e323702e7d3
+
+
+Address: 1KJ5c9B6WQFbSMwteuCQCUx9jFtL9k99te (Uncompressed)
+Privkey: 65EFF5D87851EB5161F0E7BBD2C3731E1A3480B494AAF16A9BC22BACE26EE45
+HASH160: c8ad2e24fc660ab4a0ae250350ade893a0cffc87
+
+Address: 1KsJHZ3BusNuSubPErV5nGw8iL76xgbYN (Compressed)
+Privkey: 65EFF5D87851EB5161F0E7BBD2C3731E1A3480B494AAF16A9BC22BACE26EE4501
+HASH160: 03917957490a58638ed89256773e9e6718fe71c7
+
+
+Address: 1DpvL6FtuiQcp3FHiP56koeNmajChwG21Q (Uncompressed)
+Privkey: FF2818908FB70993AA3B017F4FE92A7AD13D142BE5451A77F287BA74FC206543
+HASH160: 8cb1939831b8ed2a7fcee8bfd83b8eef436af58d
+[INFO] Speed: 185.95 MKey/s | Probe: 9.16 M | Task: S1111111111111114aETV9              ^C
+
 ```
 This is not a free project. You need to buy the public key extractor to get the password. You can also buy it separately for the same price. It is the same as the membership plan. You only pay a one-time fee, compressed password, the same as other project passwords.
 
