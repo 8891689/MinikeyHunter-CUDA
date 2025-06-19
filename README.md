@@ -91,7 +91,7 @@ make clean
 [INFO] Grid: 96 blocks, 256 threads/block
 [INFO] Work started at Thu Jun 19 14:11:52 2025
 [INFO] SEQUENTIAL (Indexed) mode starting from S888888888888888888888 (index 0).
-[INFO] Speed: 196.64 MKey/s | Probe: 3.81 M | Task: S8888888888888889gc4Ac              ^C
+[INFO] Speed: 596.64 MKey/s | Probe: 3.81 M | Task: S8888888888888889gc4Ac              ^C
 
 ```
 
@@ -163,7 +163,7 @@ HASH160: 03917957490a58638ed89256773e9e6718fe71c7
 Address: 1DpvL6FtuiQcp3FHiP56koeNmajChwG21Q (Uncompressed)
 Privkey: FF2818908FB70993AA3B017F4FE92A7AD13D142BE5451A77F287BA74FC206543
 HASH160: 8cb1939831b8ed2a7fcee8bfd83b8eef436af58d
-[INFO] Speed: 185.95 MKey/s | Probe: 9.16 M | Task: S1111111111111114aETV9              ^C
+[INFO] Speed: 685.95 MKey/s | Probe: 9.16 M | Task: S1111111111111114aETV9              ^C
 
 ```
 This is not a free project. You need to buy the public key extractor to get the password. You can also buy it separately for the same price. It is the same as the membership plan. You only pay a one-time fee, compressed password, the same as other project passwords.
