@@ -1,5 +1,39 @@
 # MinikeyHunter CUDA
 
+
+<!--  -->
+<p align="center">
+  <img src="https://img.shields.io/badge/Utility-GPU%20Minikey%20Hunter-red?style=for-the-badge" alt="GPU Minikey Hunter">
+</p>
+
+<!-- 🎯  -->
+<p align="center">
+  <img src="https://img.shields.io/badge/Target-Bitcoin%20Minikeys-orange?logo=bitcoin&logoColor=white" alt="Targeting Bitcoin Minikeys">
+  <img src="https://img.shields.io/badge/Acceleration-GPU%20(NVIDIA%20CUDA)-brightgreen?logo=nvidia" alt="GPU Acceleration with NVIDIA CUDA">
+</p>
+
+<!-- ⚙️  -->
+<p align="center">
+  <img src="https://img.shields.io/badge/Architecture-GPU%20Search%20+%20CPU%20Verify-blue" alt="GPU Search + CPU Verification Architecture">
+  <img src="https://img.shields.io/badge/Filter-Bloom%20Filter%20Pre--Screening-lightgrey" alt="Bloom Filter Pre-Screening">
+</p>
+
+<!--  -->
+<p align="center">
+  <img src="https://img.shields.io/badge/Language-C++%20%7C%20CUDA-blue?logo=cplusplus" alt="C++ and CUDA">
+  <img src="https://img.shields.io/badge/Platform-Linux-lightgrey?logo=linux&logoColor=black" alt="Platform Support">
+  <img src="https://img.shields.io/badge/Interface-CLI%20Tool-black" alt="Command Line Interface Tool">
+</p>
+
+<!--  -->
+<p align="center">
+  <a href="https://github.com/8891689/MinikeyHunter-CUDA/commits/main"><img src="https://img.shields.io/github/last-commit/8891689/MinikeyHunter-CUDA" alt="Last Commit"></a>
+  <a href="https://github.com/8891689/MinikeyHunter-CUDA/stargazers"><img src="https://img.shields.io/github/stars/8891689/MinikeyHunter-CUDA?style=social" alt="GitHub Stars"></a>
+  <a href="https://github.com/8891689/MinikeyHunter-CUDA#sponsorship"><img src="https://img.shields.io/badge/Sponsor-❤️-red" alt="Sponsor Project"></a>
+</p>
+
+
+
 # Project Overview
 
 This is a high-performance mini-key Bitcoin address search tool that fully utilizes the powerful parallel computing capabilities of NVIDIA GPUs through CUDA technology. It is designed to find private keys corresponding to a given list of target Bitcoin addresses.
@@ -39,6 +73,17 @@ e. If a match is confirmed, the found address and its corresponding private key 
 In sequential mode, the starting key (KEY_START_IX) is incremented after each batch is processed.
 The program periodically displays the current computation speed (in MKey/s, GKey/s, or TKey/s) and the current key range being processed.
 The saveStatus() function is called at regular intervals to write the progress to a file.
+
+
+### 🔑 What is a Bitcoin Minikey?
+
+A "Minikey" is a short, Base58-encoded string that represents a full 256-bit Bitcoin private key. It was an early, non-standardized method for creating "brainwallets" from short passphrases. A valid minikey is 30 characters long, always starts with an 'S', and is essentially the SHA256 hash of a passphrase, with a checksum added.
+
+Example: `S65iN5g6vbeT3pmnA1bFp6zT3` corresponds to the private key `E9873D79C6D87DC0FB6A5778633389F4453213303DA61F20BD67FC233AA33262`.
+
+This tool is designed to brute-force this specific format at extremely high speeds using GPU acceleration.
+
+
 
 # How to Use
 
@@ -167,6 +212,7 @@ HASH160: 8cb1939831b8ed2a7fcee8bfd83b8eef436af58d
 
 ```
 This is not a free project. You need to buy the public key extractor to get the password. You can also buy it separately for the same price. It is the same as the membership plan. You only pay a one-time fee, compressed password, the same as other project passwords.
+
 
 # Acknowledgements
 
