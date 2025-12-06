@@ -215,7 +215,7 @@ HASH160: 8cb1939831b8ed2a7fcee8bfd83b8eef436af58d
 [INFO] Speed: 685.95 MKey/s | Probe: 9.16 M | Task: S1111111111111114aETV9              ^C
 
 ```
-This is not a free project. You need to buy the public key extractor to get the password. You can also buy it separately for the same price. It is the same as the membership plan. You only pay a one-time fee, compressed password, the same as other project passwords.
+The original project was open-source and free, but the reimplementation is not. You need to purchase a public key extractor to obtain the password. You can also purchase it separately for the same price. This is similar to a membership program. You only need to pay a one-time fee to obtain the compressed password, which is the same as the password for other projects.
 
 
 # Acknowledgements
