@@ -1,5 +1,3 @@
-# MinikeyHunter CUDA
-
 
 <!--  -->
 <p align="center">
@@ -34,7 +32,13 @@
 
 
 
+# MinikeyHunter CUDA
+
+
 # Project Overview
+
+
+Thanks to the excellent work: https://github.com/5l1v3r1/Minikeys, whose ideas were inspired by it to reimplement this!
 
 This is a high-performance mini-key Bitcoin address search tool that fully utilizes the powerful parallel computing capabilities of NVIDIA GPUs through CUDA technology. It is designed to find private keys corresponding to a given list of target Bitcoin addresses.
 
